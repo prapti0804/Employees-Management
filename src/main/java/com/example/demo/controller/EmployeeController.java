@@ -34,22 +34,15 @@ public class EmployeeController {
 		return employeeServices.getEmployee(email);
 	}
 
+
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	@PutMapping("/employee")
-	public Employee addEmployee(@RequestBody Employee employee) {
-		return employeeServices.addEmployee(employee);
-	}
-	
-	@GetMapping("/department")
-	public list<>
+//	@PutMapping("/employee")
+//	public Employee addEmployee(@RequestBody Employee employee) {
+//		return employeeServices.addEmployee(employee);
+//	}
+//	
+//	@GetMapping("/department")
+//	public list<>
 	
 }
