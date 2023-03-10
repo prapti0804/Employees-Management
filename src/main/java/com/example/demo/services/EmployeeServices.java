@@ -23,6 +23,12 @@ public class EmployeeServices {
     	 return saveEmployee;
     	 
      }
+
+
+	public Employee getEmployee(String email) {
+		employeeRepository.findByEmail(email);
+		return null;
+	}
 	
 	
 

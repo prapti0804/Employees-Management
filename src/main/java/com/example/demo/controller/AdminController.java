@@ -1,12 +1,11 @@
 package com.example.demo.controller;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Authentication;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,8 +15,9 @@ import com.example.demo.services.DepartmentServices;
 import com.example.demo.services.EmployeeServices;
 
 @RestController
-@RequestMapping
-public class EmployeeController {
+@RequestMapping("/admin")
+public class AdminController {
+	
 	@Autowired
 	private EmployeeServices employeeServices;
 	
@@ -26,29 +26,12 @@ public class EmployeeController {
 	
 	@Autowired
 	private AttendenceService attendenceService;
-	
-	@GetMapping("/employee")
-	public Employee getAllEmployee(Authentication authentication){
-		String email="1234";
-		return employeeServices.getEmployee(email);
-	}
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	@PutMapping("/employee")
-	public Employee addEmployee(@RequestBody Employee employee) {
-		return employeeServices.addEmployee(employee);
+	@GetMapping("/employee/{email}")
+	public ResponseEntity<?> getEmployee(@PathVariable String email){
+		Employee employee = employeeServices.getEmployee(email);
+		return ResponseEntity.status(HttpStatus.OK).body(employee);
 	}
 	
-	@GetMapping("/department")
-	public list<>
 	
 }
