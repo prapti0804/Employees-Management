@@ -17,7 +17,7 @@ public class DepartmentServices {
 		return departmentRepository.findAll();
 	}
 	
-	public Department adddepartent(Department department) {
+	public Department addDepartment(Department department) {
    	 Department saveDepartment=departmentRepository.save(department);
    	 return saveDepartment;
    	 

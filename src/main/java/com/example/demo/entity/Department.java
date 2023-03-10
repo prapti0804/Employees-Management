@@ -1,11 +1,13 @@
 package com.example.demo.entity;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+@Entity
 @Getter
 @Setter
 @AllArgsConstructor
@@ -13,7 +15,7 @@ import lombok.Setter;
 public class Department {
 	
 	@Id
-	private int d_id;
+	private int did;
 	private String dname;
 	private String description;
 	private String location;

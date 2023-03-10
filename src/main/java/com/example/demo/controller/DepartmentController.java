@@ -9,22 +9,22 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.entity.Employee;
-import com.example.demo.services.EmployeeServices;
+import com.example.demo.entity.Department;
+import com.example.demo.services.DepartmentServices;
 
 @RestController
 @RequestMapping
-public class EmployeeController {
+public class DepartmentController {
 	@Autowired
-	private EmployeeServices employeeServices;
+	private DepartmentServices departmentServices;
 	
-	@GetMapping("/employees")
-	public List<Employee> getAllEmployee(){
-		return employeeServices.getAllEmployee();
+	@GetMapping("/departments")
+	public List<Department> getAllDepartments(){
+		return departmentServices.getAllDepartment();
 	}
-
-	@PutMapping("/employee")
-	public Employee addEmployee(@RequestBody Employee employee) {
-		return employeeServices.addEmployee(employee);
+    
+	@PutMapping("/department")
+	public Department addDepartment(@RequestBody Department department) {
+		return departmentServices.addDepartment(department);
 	}
 }
