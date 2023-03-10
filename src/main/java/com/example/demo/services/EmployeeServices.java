@@ -29,6 +29,18 @@ public class EmployeeServices {
 		employeeRepository.findByEmail(email);
 		return null;
 	}
+
+
+	public Employee addtodepartment(Employee employee) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	public Employee deleteemployee(String email) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 

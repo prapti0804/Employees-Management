@@ -22,4 +22,15 @@ public class DepartmentServices {
    	 return saveDepartment;
    	 
     }
+
+	public Department getDepartment(int dID) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Department deleteDepartment(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

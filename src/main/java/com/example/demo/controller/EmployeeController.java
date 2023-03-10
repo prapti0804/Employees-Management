@@ -29,6 +29,7 @@ public class EmployeeController {
 	
 	@GetMapping("/employee")
 	public Employee getAllEmployee(Authentication authentication){
+		
 		String email="1234";
 		return employeeServices.getEmployee(email);
 	}

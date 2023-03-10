@@ -15,7 +15,7 @@ import lombok.Setter;
 public class Department {
 	
 	@Id
-	private int did;
+	private int dID;
 	private String dname;
 	private String description;
 	private String location;
